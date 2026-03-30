@@ -81,7 +81,7 @@ mascotas.tipo
 FROM duenios
 INNER JOIN mascotas ON duenios.id_duenio = mascotas.id_duenio;
 
--- Obtener las atenciones realizadas a las mascotas con los detalles del profeaional que las atendió
+-- Obtener las atenciones realizadas a las mascotas con los detalles del profesional que las atendió
 
 SELECT 
 mascotas.nombre,
@@ -103,6 +103,8 @@ INNER JOIN atenciones ON atenciones.id_profesional = profesionales.id_profesiona
 GROUP BY profesionales.nombre, profesionales.especialidad;
 
 -- Actualizar la dirección de un dueño (por ejemplo, cambiar la dirección de Juan Pérez)
+
+SELECT nombre FROM duenios WHERE nombre LIKE 'Juan%';
 
 UPDATE duenios
 SET direccion = 'Los Jardines 256'
